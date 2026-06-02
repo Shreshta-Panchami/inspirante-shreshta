@@ -76,7 +76,7 @@ backend/
 
 ### 1. Clone the Repository
 
-git clone <repository-url>
+git clone https://github.com/Shreshta-Panchami/inspirante-shreshta.git
 
 ### 2. Navigate to Backend Folder
 
@@ -92,7 +92,7 @@ Create a file named .env inside the backend folder.
 
 Example:
 
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=<your_mongodb_connection_string>
 
 PORT=4731
 
@@ -117,6 +117,7 @@ http://localhost:4731
 ### 7. Launch the Frontend
 
 Open frontend/index.html in your browser.
+Make sure the backend server is running before using the application.
 
 ## Sample Credentials
 

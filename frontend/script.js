@@ -1,23 +1,43 @@
-function login() {
-  let u = document.getElementById("username").value;
-  let p = document.getElementById("password").value;
+async function login() {
+
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
   let role = document.getElementById("role").value;
 
-  // Admin check
-  if (role === "admin") {
-    if (u === "admin" && p === "inspirante2026") {
+  try {
+
+    const response = await fetch("http://localhost:4731/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        username,
+        password,
+        role
+      })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      document.getElementById("msg").innerText = data.message;
+      return;
+    }
+
+    localStorage.setItem("username", username);
+
+    if (data.role === "admin") {
       window.location.href = "admin.html";
     } else {
-      document.getElementById("msg").innerText = "Invalid admin login";
-    }
-  }
-
-  // Student check (basic demo)
-  else {
-    if (p === "student123") {
       window.location.href = "student.html";
-    } else {
-      document.getElementById("msg").innerText = "Invalid student login";
     }
+
+  } catch (error) {
+
+    console.log(error);
+
+    document.getElementById("msg").innerText =
+      "Unable to connect to server";
   }
 }

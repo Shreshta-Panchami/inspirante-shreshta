@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-         CampusEvent Hub
-    </header>
+
+<header>
+    CampusEvent Hub
+</header>
+
 <main>
-  <div class="container">
-    <h2>Admin Dashboard</h2>
+    <div class="container">
 
-    <input type="text" placeholder="Event Name">
-    <input type="date">
-    <input type="text" placeholder="Venue">
-    <input type="number" placeholder="Capacity">
+        <h2>Admin Dashboard</h2>
 
-    <button>Create Event</button>
+        <input type="text" id="eventName" placeholder="Event Name">
 
-    <br><br>
-    <a href="login.html">Logout</a>
-  </div></main>
+        <input type="date" id="eventDate">
+
+        <input type="text" id="eventVenue" placeholder="Venue">
+
+        <input type="number" id="eventCapacity" placeholder="Capacity">
+
+        <button id="createBtn">
+            Create Event
+        </button>
+
+        <p id="msg"></p>
+
+        <br>
+
+        <a href="login.html">Logout</a>
+
+    </div>
+</main>
+
 <footer>
-        © 2026 College Event Hub. All Rights Reserved.
-    </footer>
+    © 2026 College Event Hub. All Rights Reserved.
+</footer>
+
+<script src="admin.js"></script>
+
 </body>
 </html>

@@ -43,62 +43,69 @@ CampusEvent Hub is a web-based Event Registration Management System built using 
 
 ## Project Structure
 
+```text
 frontend/
-
-* index.html
-* login.html
-* admin.html
-* student.html
-* style.css
-* script.js
-* admin.js
-* student.js
+├── index.html
+├── login.html
+├── admin.html
+├── student.html
+├── style.css
+├── script.js
+├── admin.js
+└── student.js
 
 backend/
-
-* models/
-
-  * User.js
-  * Event.js
-  * Registration.js
-* routes/
-
-  * authRoutes.js
-  * eventRoutes.js
-  * registrationRoutes.js
-* server.js
-* seed.js
-* package.json
-* package-lock.json
-* .env.example
+├── models/
+│   ├── User.js
+│   ├── Event.js
+│   └── Registration.js
+├── routes/
+│   ├── authRoutes.js
+│   ├── eventRoutes.js
+│   └── registrationRoutes.js
+├── server.js
+├── seed.js
+├── package.json
+├── package-lock.json
+└── .env.example
+```
 
 ## Local Setup Instructions
 
 ### 1. Clone the Repository
 
+```bash
 git clone https://github.com/Shreshta-Panchami/inspirante-shreshta.git
+```
 
 ### 2. Navigate to Backend Folder
 
+```bash
 cd backend
+```
 
 ### 3. Install Dependencies
 
+```bash
 npm install
+```
 
 ### 4. Create Environment File
 
-Create a file named .env inside the backend folder.
+Create a file named `.env` inside the `backend` folder.
 
 Example:
 
+```env
 MONGO_URI=<your_mongodb_connection_string>
-
 PORT=4731
+```
 
 ### 5. Seed the Database
 
+```bash
 node seed.js
+```
 
 This creates:
 
@@ -108,34 +115,39 @@ This creates:
 
 ### 6. Start the Backend Server
 
+```bash
 npm start
+```
 
 Server runs on:
 
+```text
 http://localhost:4731
+```
 
 ### 7. Launch the Frontend
 
-Open frontend/index.html in your browser.
+Open `frontend/index.html` in your browser.
+
 Make sure the backend server is running before using the application.
 
 ## Sample Credentials
 
 ### Admin
 
+```text
 Username: admin
-
 Password: inspirante2026
-
 Role: admin
+```
 
 ### Student
 
+```text
 Username: asha.rao
-
 Password: student123
-
 Role: student
+```
 
 ## Functionalities Implemented
 
@@ -152,7 +164,7 @@ Role: student
 
 ## Environment Variables
 
-Required variables are documented in backend/.env.example
+Required variables are documented in `backend/.env.example`.
 
 ## Known Issues
 

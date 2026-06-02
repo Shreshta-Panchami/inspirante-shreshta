@@ -3,6 +3,12 @@
 <head>
   <title>Login</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+  .login-container {
+      width: 480px;
+      padding: 20px;
+  }
+</style>
 </head>
 
 <body>
@@ -10,8 +16,7 @@
          CampusEvent Hub
     </header>
 <main>
-  <div class="container">
-    <h2> Login</h2><br>
+<div class="container login-container">    <h2> Login</h2><br>
    
     <input type="text" id="username" placeholder="Username"><br><br>
     <input type="password" id="password" placeholder="Password"><br><br>
@@ -20,9 +25,9 @@
       <option value="student">Student</option>
       <option value="admin">Admin</option>
     </select>
-<br><br>
+<br><br><br><br>
     <button onclick="login()">Login</button>
-
+<br><br><br>
     <p id="msg"></p>
   </div>
 </main>

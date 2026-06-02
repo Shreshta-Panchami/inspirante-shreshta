@@ -66,7 +66,32 @@ button:hover {
 }
 
 /* Student Events */
+.disabled-btn {
+    width: 35%;
+    padding: 10px;
+    background: #bdbdbd;
+    color: #666;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+.dashboard-title {
+    margin-bottom: 30px;
+}
 
+.section-title {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #39093f;
+}
+
+.section-divider {
+    margin: 35px 0;
+    border-top: 3px solid #170719;
+}
+.disabled-btn:hover {
+    background: #bdbdbd;
+}
 .events-grid {
     display: flex;
     flex-wrap: wrap;
@@ -85,4 +110,36 @@ button:hover {
 
 .event-card h4 {
     margin-top: 0;
+}
+.top-header {
+    background: #561b5e;
+    color: white;
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logout-btn {
+    width: auto;
+    padding: 10px 18px;
+
+    background: white;
+    color: #561b5e;
+
+    border: none;
+    border-radius: 6px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #f0f0f0;
 }

@@ -2,9 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 const Event = require("../models/Event");
+const Registration = require("../models/Registration");
 
 // Create Event
 router.post("/", async (req, res) => {
+
   try {
 
     const { name, date, venue, capacity } = req.body;
@@ -31,6 +33,7 @@ router.post("/", async (req, res) => {
     });
 
   }
+
 });
 
 // Get All Events
@@ -40,7 +43,23 @@ router.get("/", async (req, res) => {
 
     const events = await Event.find().sort({ date: 1 });
 
-    res.json(events);
+    const result = [];
+
+    for (const event of events) {
+
+      const registrations =
+        await Registration.countDocuments({
+          eventId: event._id
+        });
+
+      result.push({
+        ...event.toObject(),
+        registrations
+      });
+
+    }
+
+    res.json(result);
 
   } catch (error) {
 

@@ -7,24 +7,43 @@
 
 <body>
 
-<header>
-    CampusEvent Hub
+<header class="top-header">
+
+    <div class="title">
+        CampusEvent Hub
+    </div>
+
+    <button class="logout-btn"
+        onclick="window.location.href='login.html'">
+        Logout
+    </button>
+
 </header>
 
 <main>
     <div class="container">
 
-        <h2>Student Dashboard</h2>
+       <h2 class="dashboard-title">
+    Student Dashboard
+</h2>
 
-        <h3>Upcoming Events</h3>
+<h3 class="section-title">
+    My Registrations
+</h3>
 
-      <div id="events" class="events-grid">
-    Loading events...
+<div id="myRegistrations" class="events-grid">
+    Loading...
 </div>
 
-        <br>
+<div class="section-divider"></div>
 
-        <a href="login.html">Logout</a>
+<h3 class="section-title">
+    Upcoming Events
+</h3>
+
+        <div id="events" class="events-grid">
+            Loading events...
+        </div>
 
     </div>
 </main>

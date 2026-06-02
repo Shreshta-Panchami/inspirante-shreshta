@@ -7,8 +7,17 @@
 
 <body>
 
-<header>
-    CampusEvent Hub
+<header class="top-header">
+
+    <div class="title">
+        CampusEvent Hub
+    </div>
+
+    <button class="logout-btn"
+        onclick="window.location.href='login.html'">
+        Logout
+    </button>
+
 </header>
 
 <main>
@@ -30,9 +39,16 @@
 
         <p id="msg"></p>
 
+        <hr>
+
+        <h3>All Events</h3>
+
+       <div id="eventList" class="events-grid">
+    Loading events...
+</div>
         <br>
 
-        <a href="login.html">Logout</a>
+       
 
     </div>
 </main>
